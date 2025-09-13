@@ -1,0 +1,422 @@
+/* Genel Ayarlar ve Fontlar */
+body {
+    font-family: Arial, sans-serif; /* Daha profesyonel bir font seçebilirsin */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header (Üst Gezinme Paneli) Stilleri */
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1e3c72;
+    box-shadow: 0 2px 5px rgba(30, 60, 114, 0.3);
+    position: sticky; /* Sayfa aşağı kayınca menüyü sabit tutar */
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff; /* Firma adınız için beyaz renk */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+header nav ul li a:hover {
+    color: #87ceeb; /* Light blue hover color */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ana İçerik Bölümleri (Section) */
+.content-section {
+    padding: 4rem 10%;
+    margin: 2rem 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Hero Section (Giriş Bölümü) */
+.hero-section {
+    background: linear-gradient(rgba(30, 60, 114, 0.7), rgba(42, 82, 152, 0.7)), url('picture/1.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 10rem 1rem;
+    border-radius: 0; /* Giriş bölümü tam genişlikte olsun */
+    box-shadow: none;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Basit Ürün Bölümü */
+.simple-products {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-text {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.product-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.product-link {
+    color: #2a5298;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.product-link:hover {
+    color: #1e3c72;
+    text-decoration: underline;
+}
+
+.product-images {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.main-product-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(30, 60, 114, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.main-product-img:hover {
+    transform: scale(1.05);
+}
+
+/* Kart Bileşenleri (Ürünler/Hizmetler) - for other pages */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(30, 60, 114, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e3f2fd;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.2);
+    border-color: #2a5298;
+}
+
+.card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+/* Hakkımızda Bölümü Görsel ve Metin Düzeni */
+.text-image-flex {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşer */
+}
+
+.text-image-flex .text-content {
+    flex: 1;
+}
+
+.text-image-flex .image-content {
+    flex: 1;
+}
+
+.text-image-flex img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Referanslar Bölümü */
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background-color: #f8f9ff;
+    padding: 1.5rem;
+    border-left: 5px solid #2a5298;
+    border-radius: 6px;
+    max-width: 400px;
+    box-shadow: 0 2px 5px rgba(30, 60, 114, 0.1);
+}
+
+/* Footer (Alt Bilgi) Stilleri */
+footer {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 5px rgba(30, 60, 114, 0.3);
+}
+
+/* Değerler Bölümü */
+.values-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.value-card {
+    background-color: #f8f9ff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(30, 60, 114, 0.1);
+    border: 1px solid #e3f2fd;
+}
+
+.value-card h4 {
+    color: #2a5298;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* İletişim Sayfası */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, #f8f9ff, #e3f2fd);
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.15);
+    border: 2px solid #e3f2fd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(30, 60, 114, 0.2);
+    border-color: #2a5298;
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.contact-card h4 {
+    color: #2a5298;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.contact-card p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.contact-card a {
+    color: #2a5298;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #1e3c72;
+    text-decoration: underline;
+}
+
+.map-container {
+    margin-top: 2rem;
+}
+
+.map-placeholder {
+    background-color: #f8f9ff;
+    border: 2px dashed #2a5298;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 8px;
+    color: #555;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+}
+
+/* Referanslar Sayfası */
+.client-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.client-logo {
+    background-color: #f8f9ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(30, 60, 114, 0.1);
+    border: 1px solid #e3f2fd;
+}
+
+.client-logo h4 {
+    color: #2a5298;
+    margin-bottom: 0.5rem;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(30, 60, 114, 0.1);
+    border: 1px solid #e3f2fd;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h4 {
+    color: #2a5298;
+    padding: 1rem 1rem 0.5rem;
+    margin: 0;
+}
+
+.project-card p {
+    color: #555;
+    padding: 0 1rem 1rem;
+    margin: 0;
+}
+
+/* Mobil Uyumlu (Responsive) Tasarım */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 2rem;
+    }
+    
+    .contact-icon {
+        font-size: 2.5rem;
+    }
+    
+    .values-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .client-logos {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
